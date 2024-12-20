@@ -1,12 +1,12 @@
-⤵️ download方法
+# ⤵️ download方法
 
 DrissionPage 每种页面对象都内置一个下载工具，提供任务管理、多线程并发、大文件分块、自动重连、文件名冲突处理等功能。该工具现已独立打包成一个库，名为 DownloadKit，详细介绍见：DownloadKit。这里只介绍其主要功能，具体使用和设置方法请移步该文档。
 
-## ✅️ 功能简介
+## ✅️️ 功能简介
 
 ### 📌 支持该工具的对象
 
-以下对象均支持
+以下对象均支持：
 
 * SessionPage
 * ChromiumTab
@@ -29,11 +29,10 @@ DrissionPage 每种页面对象都内置一个下载工具，提供任务管理�
 * 支持自定义连接参数
 * 任务失败自动重试
 
-**注意**
-
+**注意**  
 DownloadKit 是对 requests 封装实现的，不是调用浏览器功能。如果下载目标对 headers、data 等有要求，必需手动添加。
 
-## ✅️ 添加任务
+## ✅️️ 添加任务
 
 ### 📌 单线程任务
 
@@ -108,7 +107,7 @@ page.download.add('http://****/demo.zip').wait()
 
 以上仅是普通示例，详细功能请查阅：DownloadKit 添加任务
 
-## ✅️ 下载设置
+## ✅️️ 下载设置
 
 ### 📌 全局设置
 
@@ -132,7 +131,7 @@ page.download.add('http://****/demo.zip').wait()
 
 详细设置功能请查阅：DownloadKit 运行设置
 
-## ✅️ 任务管理
+## ✅️️ 任务管理
 
 ### 📌 任务对象
 
@@ -209,8 +208,7 @@ print(page.download.get_failed_missions())
 ]
 ```
 
-**Tips**
-
+**Tips**  
 获取失败任务对象后，可从其 `data` 属性读取任务内容，以便记录日志或择机重试。
 
 ### 📌 详细使用文档

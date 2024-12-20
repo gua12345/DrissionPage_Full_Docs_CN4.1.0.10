@@ -17,10 +17,10 @@ DrissionPage 无需切入切出即可处理`<iframe>`元素。可实现跨级元
 | loc_ind_ele  | str<br>int<br>ChromiumFrame | 必填   | 定位符<br>`<iframe>`元素序号（从1开始，负数表示倒数）<br>ChromiumFrame对象<br>id属性内容<br>name属性内容 |
 | timeout      | float               | None   | 超时时间（秒），为None时使用页面超时时间                              |
 
-**返回类型** | **说明**  
----|---  
-ChromiumFrame | `<frame>`或`<iframe>`元素对象  
-NoneElement | 找不到时返回NoneElement  
+| 返回类型       | 说明                       |
+|----------------|----------------------------|
+| ChromiumFrame  | `<frame>`或`<iframe>`元素对象 |
+| NoneElement    | 找不到时返回NoneElement    |
 
 **注意**  
 需要特别注意的是，如果页面中有嵌套的`<iframe>`，用序号获取的方式会存在不准确。比如，用`get_frames()`可获取到 6 个元素，但用`get_frame(6)`却获取不到最后一个。这是因为有两个`<iframe>`是嵌套关系，导致获取不准确。
@@ -44,9 +44,9 @@ iframe = tab.get_frame(1)
 | locator  | str<br>Tuple[str, str] | None   | 定位符，为None时返回所有         |
 | timeout  | float               | None   | 超时时间（秒），为None时使用页面超时时间 |
 
-**返回类型** | **说明**  
----|---  
-List[ChromiumFrame] | `<frame>`或`<iframe>`元素对象组成的列表  
+| 返回类型            | 说明                             |
+|---------------------|----------------------------------|
+| List[ChromiumFrame] | `<frame>`或`<iframe>`元素对象组成的列表 |
 
 **提醒**  
 获取所有`<iframe>`会很慢，而且浪费资源，一般使用获取需要用到的就好。
@@ -128,5 +128,4 @@ iframe.states.is_alive
 iframe.get()
 iframe.get_screenshot()
 # 等等
-```
 ```
